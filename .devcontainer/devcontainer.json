@@ -1,0 +1,19 @@
+{
+  "name": "opcua-rt-sensor",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "context": "..",                         
+  "workspaceFolder": "/app",              
+  "runArgs": [
+    "--cap-add=sys_nice",
+    "--security-opt=seccomp=unconfined"
+  ],
+  "settings": {
+    "terminal.integrated.shell.linux": "/bin/bash"
+  },
+  "extensions": [
+    "ms-vscode.cpptools",
+    "ms-vscode.cmake-tools"
+  ]
+}

@@ -1,3 +1,18 @@
+# Build
+/build/
+/CMakeFiles/
+/Makefile
+/CMakeCache.txt
+
+
+# VSCode
+.vscode/
+
+# System files
+.DS_Store
+Thumbs.db
+
+
 # Prerequisites
 *.d
 
