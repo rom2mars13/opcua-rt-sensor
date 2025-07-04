@@ -4,15 +4,15 @@ A multithreaded OPC UA server in C++ simulating real-time sensor data updates (s
 
 ## Purpose
 
-This project was created by **Romain Kusnik** as a technical demonstration for **Schneider Electric**.
+This project is a work in progress by **Romain Kusnik** as a technical demonstration for **Schneider Electric**.
 
-This project demonstrates:
-- An OPC UA server using [open62541](https://open62541.org/)
-- Multithreaded programming in C++
-- A **soft real-time** loop that updates simulated sensor values every 10 ms
-- An embedded-like environment using Docker
+Current goals:
+- Implement an OPC UA server using [open62541](https://open62541.org/)
+- Explore multithreaded programming in C++
+- Build a soft real-time loop to update simulated sensor data
+- Containerize the environment with Docker for embedded-like testing
 
-> On a general-purpose system (like a PC or Docker container), real-time behavior is **soft**: the timing is targeted but **not strictly guaranteed**. For **hard real-time**, you would need a real-time OS (RTOS) or a real-time patched Linux kernel (e.g. PREEMPT_RT).
+> Note: Running on general-purpose systems (PC/Docker), real-time behavior is soft and not guaranteed. For true hard real-time, an RTOS or Linux with PREEMPT_RT is needed.
 
 ## Technologies
 
@@ -20,6 +20,12 @@ This project demonstrates:
 - open62541 (OPC UA)
 - Docker (dev container)
 - CMake
+
+## Status
+
+- Initial server setup complete
+- Basic real-time loop under development
+- OPC UA integration ongoing
 
 ## Build & Run (via Docker)
 

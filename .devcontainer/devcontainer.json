@@ -15,5 +15,6 @@
   "extensions": [
     "ms-vscode.cpptools",
     "ms-vscode.cmake-tools"
-  ]
+  ],
+  "forwardPorts": [4840]
 }
