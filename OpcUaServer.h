@@ -16,8 +16,20 @@ private:
     std::atomic<bool> running;
     std::thread updateThread;
 
-    void addTemperatureVariable();
-    void updateLoop();
+    void addVariables();
+    void addVariable(const char* name, int initialValue);
+    // void updateLoop();
+
+    static UA_StatusCode readCallback(UA_Server* server,
+        const UA_NodeId* sessionId, void* sessionContext,
+        const UA_NodeId* nodeId, void* nodeContext,
+        UA_Boolean sourceTimeStamp, const UA_NumericRange* range,
+        UA_DataValue* dataValue);
+
+    static UA_StatusCode writeCallback(UA_Server* server,
+        const UA_NodeId* sessionId, void* sessionContext,
+        const UA_NodeId* nodeId, void* nodeContext,
+        const UA_NumericRange* range, const UA_DataValue* data);
 
 public:
     OpcUaServer();
@@ -27,3 +39,4 @@ public:
 };
 
 #endif // OPCUASERVER_H
+
